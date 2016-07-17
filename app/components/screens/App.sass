@@ -1,0 +1,64 @@
+*
+  box-sizing: border-box
+
+html
+  font-family: 'Fredoka One', cursive
+  background-color: #353d48
+  padding-top: 70px
+  color: #333
+
+.AppScreen
+  .header
+    position: fixed
+    display: flex
+    align-items: center
+    top: 0
+    left: 0
+    right: 0
+    padding: 15px
+    z-index: 10
+    background-color: #ffffed
+    border-bottom: 1px solid white
+    h1
+      margin: 0
+      font-size: 30px
+      line-height: 30px
+    .search-input, .clear-search-btn
+      height: 40px
+      font-family: inherit
+      &:focus
+        outline: none
+    .search-input
+      width: 200px
+      margin-left: 20px
+      padding-left: 15px
+      font-size: 15px
+      border: 2px solid rgba(0,0,0,.2)
+      border-radius: 4px
+      &.filled
+        border-color: #7bc4ff
+    .clear-search-btn
+      width: 40px
+      border: none
+      background: transparent
+      font-size: 25px
+      cursor: pointer
+      opacity: .6
+    .menu-links
+      position: absolute
+      right: 15px
+      top: 15px
+      a
+        display: inline-block
+        padding: 10px 15px
+        color: rgba(0,0,0,.5)
+        text-decoration: none
+        background-color: rgba(0,0,0,.1)
+        border-radius: 4px
+        &:focus
+          outline: none
+        & + a
+          margin-left: 10px
+        &.active
+          background-color: #4cafff
+          color: #000
