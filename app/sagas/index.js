@@ -29,8 +29,8 @@ export function * fetchDetails() {
   while (true) {
     const { pokemonId } = yield take(SELECT_POKEMON)
     yield put(requestPokemonDetails())
-    const data = yield getDetails(pokemonId)
-    console.log(data)
+    //const data = yield getDetails(pokemonId)
+    //console.log(data)
     //yield put(receivePokemons(pokemons))
   }
 }
