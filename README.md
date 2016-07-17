@@ -8,7 +8,7 @@ __Made with love thanks to__
 - [Redux](http://redux.js.org/)
 - [Redux Saga](http://yelouafi.github.io/redux-saga/)
 - [Brunch](http://brunch.io/)
-- [...](./blob/master/package.json)
+- [...](https://github.com/fbarrailla/Pokedex/blob/master/package.json)
 
 ## Features
 
