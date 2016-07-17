@@ -19,6 +19,31 @@ __Made with love thanks to__
 - [x] Search monster(s) by name
 - [ ] Show monster details
 
+## Run project
+
+- Clone the repository
+  ```bash
+  git clone https://github.com/fbarrailla/Pokedex.git
+  cd Pokedex
+  ```
+
+- Install dependencies
+  ```bash
+  npm i
+  ```
+
+- Run dev server
+  ```bash
+  npm run dev
+  ```
+  _then go to [localhost:3333](http://localhost:3333)_
+
+- Or build the "production" bundle
+  ```bash
+  npm run build
+  ```
+  _check the `/public` directory_
+
 ## Legal
 
 Pokémon images, names and information (c) 1995-2014 Nintendo/Game freak.
