@@ -1,7 +1,6 @@
 import React, { Component, PropTypes } from 'react'
 import { Link } from 'react-router'
 import classNames from 'classnames'
-import Loader from 'halogen/PulseLoader'
 import PokemonName from '../pokemon/PokemonName'
 import PokemonDetailsGallery from '../pokemon/PokemonDetailsGallery'
 import PokemonDetailsInfos from '../pokemon/PokemonDetailsInfos'
@@ -23,28 +22,27 @@ export default class PokemonDetailsScreen extends Component {
   }
 
   renderDetails() {
-    const { details, location } = this.props
-    if (typeof details.id === undefined) {
-      return null
-    }
+    const { details, location, loading } = this.props
     const basePath = '/' + location.pathname.match(/\/([a-z]+)/)[1]
     return (
       <div>
         <Link className="close-link" to={basePath}>✕</Link>
-        <PokemonName name={details.name} />
-        <div className="details-container">
-          <PokemonDetailsGallery items={details.sprites} />
-          <PokemonDetailsInfos
-            types={details.types}
-            height={details.height}
-            weight={details.weight}
-            abilities={details.abilities}
-          />
-          <PokemonDetailsEvolutions
-            evolutions={details.evolutions}
-            basePath={basePath}
-          />
-        </div>
+        <PokemonName name={details.name || 'lol'} />
+        {!loading && typeof details.id !== undefined ? (
+          <div className="details-container">
+            <PokemonDetailsGallery items={details.sprites} />
+            <PokemonDetailsInfos
+              types={details.types}
+              height={details.height}
+              weight={details.weight}
+              abilities={details.abilities}
+            />
+            <PokemonDetailsEvolutions
+              evolutions={details.evolutions}
+              basePath={basePath}
+            />
+          </div>
+        ) : null}
       </div>
     )
   }
@@ -53,13 +51,13 @@ export default class PokemonDetailsScreen extends Component {
     const { visible } = this.state
     const { loading } = this.props
     const className = classNames('PokemonDetailsScreen', {
-      visible
+      visible,
+      loading
     })
+    console.log(className)
     return (
       <div className={className}>
-        {loading ? (
-          <Loader className="loader" color="#4cafff" size="16px" margin="4px" />
-        ) : this.renderDetails()}
+        {this.renderDetails()}
       </div>
     )
   }

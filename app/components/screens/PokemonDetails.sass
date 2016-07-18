@@ -20,9 +20,14 @@ $panel-height: 250px
   &.visible
     bottom: 0
   .details-container
+    margin-top: 10px
     display: flex
     font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace
     font-size: 14px
+    opacity: 1
+    transition: opacity .5s ease-in
+  &.loading .details-container
+    opacity: 0
   .label
     font-weight: bold
   .close-link
