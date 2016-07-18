@@ -1,3 +1,87 @@
+/* line 1, /Users/fbarrailla/Dev/projets/pokedex/app/components/pokemon/PokemonDetailsEvolutions.sass */
+.PokemonDetailsEvolutions {
+  flex: 0 0 auto;
+  padding-left: 40px; }
+  /* line 4, /Users/fbarrailla/Dev/projets/pokedex/app/components/pokemon/PokemonDetailsEvolutions.sass */
+  .PokemonDetailsEvolutions h1.PokemonName {
+    position: relative;
+    background-color: transparent;
+    font-size: 14px;
+    text-align: left;
+    padding-left: 0; }
+  /* line 10, /Users/fbarrailla/Dev/projets/pokedex/app/components/pokemon/PokemonDetailsEvolutions.sass */
+  .PokemonDetailsEvolutions .evolution-row {
+    text-align: center; }
+
+/* line 1, /Users/fbarrailla/Dev/projets/pokedex/app/components/pokemon/PokemonDetailsGallery.sass */
+.PokemonDetailsGallery {
+  flex: 0 0 auto; }
+  /* line 3, /Users/fbarrailla/Dev/projets/pokedex/app/components/pokemon/PokemonDetailsGallery.sass */
+  .PokemonDetailsGallery .item-label {
+    margin-top: 0;
+    font-size: 14px;
+    text-align: center; }
+  /* line 7, /Users/fbarrailla/Dev/projets/pokedex/app/components/pokemon/PokemonDetailsGallery.sass */
+  .PokemonDetailsGallery .gallery {
+    display: flex; }
+    /* line 9, /Users/fbarrailla/Dev/projets/pokedex/app/components/pokemon/PokemonDetailsGallery.sass */
+    .PokemonDetailsGallery .gallery button {
+      background: none;
+      border: none;
+      font-size: 20px; }
+      /* line 13, /Users/fbarrailla/Dev/projets/pokedex/app/components/pokemon/PokemonDetailsGallery.sass */
+      .PokemonDetailsGallery .gallery button.disabled {
+        opacity: .3; }
+      /* line 15, /Users/fbarrailla/Dev/projets/pokedex/app/components/pokemon/PokemonDetailsGallery.sass */
+      .PokemonDetailsGallery .gallery button:focus {
+        outline: none; }
+      /* line 17, /Users/fbarrailla/Dev/projets/pokedex/app/components/pokemon/PokemonDetailsGallery.sass */
+      .PokemonDetailsGallery .gallery button .arrow-left,
+      .PokemonDetailsGallery .gallery button .arrow-right {
+        display: block;
+        width: 0;
+        height: 0;
+        border-style: solid; }
+      /* line 23, /Users/fbarrailla/Dev/projets/pokedex/app/components/pokemon/PokemonDetailsGallery.sass */
+      .PokemonDetailsGallery .gallery button .arrow-right {
+        border-width: 13px 0 13px 10px;
+        border-color: transparent transparent transparent #333333; }
+      /* line 26, /Users/fbarrailla/Dev/projets/pokedex/app/components/pokemon/PokemonDetailsGallery.sass */
+      .PokemonDetailsGallery .gallery button .arrow-left {
+        border-width: 13px 10px 13px 0;
+        border-color: transparent #333333 transparent transparent; }
+
+/* line 1, /Users/fbarrailla/Dev/projets/pokedex/app/components/pokemon/PokemonDetailsInfos.sass */
+.PokemonDetailsInfos {
+  flex: 1 2 auto;
+  padding-left: 40px; }
+  /* line 4, /Users/fbarrailla/Dev/projets/pokedex/app/components/pokemon/PokemonDetailsInfos.sass */
+  .PokemonDetailsInfos .detail-row + .detail-row {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px dashed rgba(0, 0, 0, 0.5); }
+  /* line 8, /Users/fbarrailla/Dev/projets/pokedex/app/components/pokemon/PokemonDetailsInfos.sass */
+  .PokemonDetailsInfos .label {
+    padding-right: 10px;
+    display: inline-block;
+    min-width: 80px; }
+  /* line 13, /Users/fbarrailla/Dev/projets/pokedex/app/components/pokemon/PokemonDetailsInfos.sass */
+  .PokemonDetailsInfos .item::after {
+    content: ','; }
+  /* line 15, /Users/fbarrailla/Dev/projets/pokedex/app/components/pokemon/PokemonDetailsInfos.sass */
+  .PokemonDetailsInfos .item:last-child::after {
+    content: ''; }
+  /* line 17, /Users/fbarrailla/Dev/projets/pokedex/app/components/pokemon/PokemonDetailsInfos.sass */
+  .PokemonDetailsInfos .item + .item {
+    padding-left: 10px; }
+
+/* line 1, /Users/fbarrailla/Dev/projets/pokedex/app/components/pokemon/PokemonImage.sass */
+.PokemonImage {
+  width: 150px;
+  height: 150px;
+  background-repeat: no-repeat;
+  background-position: center center; }
+
 /* line 3, /Users/fbarrailla/Dev/projets/pokedex/app/components/pokemon/PokemonItem.sass */
 .PokemonItem {
   margin: 10px auto;
@@ -23,25 +107,15 @@
       font-size: 12px;
       vertical-align: top; }
     /* line 23, /Users/fbarrailla/Dev/projets/pokedex/app/components/pokemon/PokemonItem.sass */
-    .PokemonItem .container .pokemon-picture {
+    .PokemonItem .container .PokemonImage {
       position: absolute;
       left: 0;
       top: 0;
       width: 194px;
-      height: 150px;
-      background-color: rgba(255, 255, 255, 0.3);
-      background-repeat: no-repeat;
-      background-position: center center; }
-    /* line 32, /Users/fbarrailla/Dev/projets/pokedex/app/components/pokemon/PokemonItem.sass */
-    .PokemonItem .container .pokemon-name {
-      position: absolute;
-      bottom: 0;
-      text-align: center;
-      width: 100%;
-      font-size: 20px; }
-      /* line 38, /Users/fbarrailla/Dev/projets/pokedex/app/components/pokemon/PokemonItem.sass */
-      .PokemonItem .container .pokemon-name::first-letter {
-        text-transform: capitalize; }
+      background-color: rgba(255, 255, 255, 0.3); }
+    /* line 29, /Users/fbarrailla/Dev/projets/pokedex/app/components/pokemon/PokemonItem.sass */
+    .PokemonItem .container .PokemonName {
+      bottom: 0; }
 
 @charset "UTF-8";
 /* line 1, /Users/fbarrailla/Dev/projets/pokedex/app/components/pokemon/PokemonItemToolbar.sass */
@@ -108,6 +182,20 @@
     border-radius: 0 0 7px 7px;
     z-index: 0; }
 
+/* line 1, /Users/fbarrailla/Dev/projets/pokedex/app/components/pokemon/PokemonName.sass */
+.PokemonName {
+  position: absolute;
+  left: 0;
+  right: 0;
+  text-align: center;
+  width: 100%;
+  font-size: 20px;
+  margin: 0;
+  padding: 10px; }
+  /* line 10, /Users/fbarrailla/Dev/projets/pokedex/app/components/pokemon/PokemonName.sass */
+  .PokemonName::first-letter {
+    text-transform: capitalize; }
+
 /* line 1, /Users/fbarrailla/Dev/projets/pokedex/app/components/screens/App.sass */
 * {
   box-sizing: border-box; }
@@ -120,6 +208,10 @@ html {
   color: #333; }
 
 /* line 11, /Users/fbarrailla/Dev/projets/pokedex/app/components/screens/App.sass */
+.AppScreen.details-visible {
+  padding-bottom: 250px; }
+
+/* line 13, /Users/fbarrailla/Dev/projets/pokedex/app/components/screens/App.sass */
 .AppScreen .header {
   position: fixed;
   display: flex;
@@ -131,19 +223,19 @@ html {
   z-index: 10;
   background-color: #ffffed;
   border-bottom: 1px solid white; }
-  /* line 22, /Users/fbarrailla/Dev/projets/pokedex/app/components/screens/App.sass */
+  /* line 24, /Users/fbarrailla/Dev/projets/pokedex/app/components/screens/App.sass */
   .AppScreen .header h1 {
     margin: 0;
     font-size: 30px;
     line-height: 30px; }
-  /* line 26, /Users/fbarrailla/Dev/projets/pokedex/app/components/screens/App.sass */
+  /* line 28, /Users/fbarrailla/Dev/projets/pokedex/app/components/screens/App.sass */
   .AppScreen .header .search-input, .AppScreen .header .clear-search-btn {
     height: 40px;
     font-family: inherit; }
-    /* line 29, /Users/fbarrailla/Dev/projets/pokedex/app/components/screens/App.sass */
+    /* line 31, /Users/fbarrailla/Dev/projets/pokedex/app/components/screens/App.sass */
     .AppScreen .header .search-input:focus, .AppScreen .header .clear-search-btn:focus {
       outline: none; }
-  /* line 31, /Users/fbarrailla/Dev/projets/pokedex/app/components/screens/App.sass */
+  /* line 33, /Users/fbarrailla/Dev/projets/pokedex/app/components/screens/App.sass */
   .AppScreen .header .search-input {
     width: 200px;
     margin-left: 20px;
@@ -151,10 +243,10 @@ html {
     font-size: 15px;
     border: 2px solid rgba(0, 0, 0, 0.2);
     border-radius: 4px; }
-    /* line 38, /Users/fbarrailla/Dev/projets/pokedex/app/components/screens/App.sass */
+    /* line 40, /Users/fbarrailla/Dev/projets/pokedex/app/components/screens/App.sass */
     .AppScreen .header .search-input.filled {
       border-color: #7bc4ff; }
-  /* line 40, /Users/fbarrailla/Dev/projets/pokedex/app/components/screens/App.sass */
+  /* line 42, /Users/fbarrailla/Dev/projets/pokedex/app/components/screens/App.sass */
   .AppScreen .header .clear-search-btn {
     width: 40px;
     border: none;
@@ -162,12 +254,12 @@ html {
     font-size: 25px;
     cursor: pointer;
     opacity: .6; }
-  /* line 47, /Users/fbarrailla/Dev/projets/pokedex/app/components/screens/App.sass */
+  /* line 49, /Users/fbarrailla/Dev/projets/pokedex/app/components/screens/App.sass */
   .AppScreen .header .menu-links {
     position: absolute;
     right: 15px;
     top: 15px; }
-    /* line 51, /Users/fbarrailla/Dev/projets/pokedex/app/components/screens/App.sass */
+    /* line 53, /Users/fbarrailla/Dev/projets/pokedex/app/components/screens/App.sass */
     .AppScreen .header .menu-links a {
       display: inline-block;
       padding: 10px 15px;
@@ -175,13 +267,13 @@ html {
       text-decoration: none;
       background-color: rgba(0, 0, 0, 0.1);
       border-radius: 4px; }
-      /* line 58, /Users/fbarrailla/Dev/projets/pokedex/app/components/screens/App.sass */
+      /* line 60, /Users/fbarrailla/Dev/projets/pokedex/app/components/screens/App.sass */
       .AppScreen .header .menu-links a:focus {
         outline: none; }
-      /* line 60, /Users/fbarrailla/Dev/projets/pokedex/app/components/screens/App.sass */
+      /* line 62, /Users/fbarrailla/Dev/projets/pokedex/app/components/screens/App.sass */
       .AppScreen .header .menu-links a + a {
         margin-left: 10px; }
-      /* line 62, /Users/fbarrailla/Dev/projets/pokedex/app/components/screens/App.sass */
+      /* line 64, /Users/fbarrailla/Dev/projets/pokedex/app/components/screens/App.sass */
       .AppScreen .header .menu-links a.active {
         background-color: #4cafff;
         color: #000; }
@@ -189,25 +281,50 @@ html {
 /* line 3, /Users/fbarrailla/Dev/projets/pokedex/app/components/screens/PokemonDetails.sass */
 .PokemonDetailsScreen {
   position: fixed;
-  bottom: -200px;
+  bottom: -252px;
   left: 0;
   right: 0;
-  height: 200px;
+  height: 250px;
   padding: 20px;
   background-color: #fff;
-  transition: bottom .2s ease-in; }
-  /* line 12, /Users/fbarrailla/Dev/projets/pokedex/app/components/screens/PokemonDetails.sass */
+  transition: bottom .2s ease-in;
+  border-top: 2px solid #001c33;
+  padding-top: 60px;
+  background-color: #c8e7ff; }
+  /* line 15, /Users/fbarrailla/Dev/projets/pokedex/app/components/screens/PokemonDetails.sass */
+  .PokemonDetailsScreen .PokemonName {
+    top: 0;
+    background-color: #b1dcff; }
+  /* line 18, /Users/fbarrailla/Dev/projets/pokedex/app/components/screens/PokemonDetails.sass */
   .PokemonDetailsScreen .loader {
     margin: 20px auto; }
-  /* line 14, /Users/fbarrailla/Dev/projets/pokedex/app/components/screens/PokemonDetails.sass */
-  .PokemonDetailsScreen h1 {
-    font-size: 25px; }
-  /* line 16, /Users/fbarrailla/Dev/projets/pokedex/app/components/screens/PokemonDetails.sass */
+  /* line 20, /Users/fbarrailla/Dev/projets/pokedex/app/components/screens/PokemonDetails.sass */
   .PokemonDetailsScreen.visible {
     bottom: 0; }
+  /* line 22, /Users/fbarrailla/Dev/projets/pokedex/app/components/screens/PokemonDetails.sass */
+  .PokemonDetailsScreen .details-container {
+    display: flex;
+    font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    font-size: 14px; }
+  /* line 26, /Users/fbarrailla/Dev/projets/pokedex/app/components/screens/PokemonDetails.sass */
+  .PokemonDetailsScreen .label {
+    font-weight: bold; }
+  /* line 28, /Users/fbarrailla/Dev/projets/pokedex/app/components/screens/PokemonDetails.sass */
+  .PokemonDetailsScreen .close-link {
+    position: absolute;
+    top: 13px;
+    right: 10px;
+    color: inherit;
+    text-decoration: none;
+    font-size: 30px;
+    z-index: 10;
+    line-height: 16px; }
+    /* line 37, /Users/fbarrailla/Dev/projets/pokedex/app/components/screens/PokemonDetails.sass */
+    .PokemonDetailsScreen .close-link:focus {
+      outline: none; }
 
 /* line 3, /Users/fbarrailla/Dev/projets/pokedex/app/components/screens/Pokemons.sass */
-.PokemonsScreen > div {
+.PokemonsScreen > .ProgressiveRenderer {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap; }
