@@ -303,13 +303,19 @@ html {
     bottom: 0; }
   /* line 22, /Users/fbarrailla/Dev/projets/pokedex/app/components/screens/PokemonDetails.sass */
   .PokemonDetailsScreen .details-container {
+    margin-top: 10px;
     display: flex;
     font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
-    font-size: 14px; }
-  /* line 26, /Users/fbarrailla/Dev/projets/pokedex/app/components/screens/PokemonDetails.sass */
+    font-size: 14px;
+    opacity: 1;
+    transition: opacity .5s ease-in; }
+  /* line 29, /Users/fbarrailla/Dev/projets/pokedex/app/components/screens/PokemonDetails.sass */
+  .PokemonDetailsScreen.loading .details-container {
+    opacity: 0; }
+  /* line 31, /Users/fbarrailla/Dev/projets/pokedex/app/components/screens/PokemonDetails.sass */
   .PokemonDetailsScreen .label {
     font-weight: bold; }
-  /* line 28, /Users/fbarrailla/Dev/projets/pokedex/app/components/screens/PokemonDetails.sass */
+  /* line 33, /Users/fbarrailla/Dev/projets/pokedex/app/components/screens/PokemonDetails.sass */
   .PokemonDetailsScreen .close-link {
     position: absolute;
     top: 13px;
@@ -319,7 +325,7 @@ html {
     font-size: 30px;
     z-index: 10;
     line-height: 16px; }
-    /* line 37, /Users/fbarrailla/Dev/projets/pokedex/app/components/screens/PokemonDetails.sass */
+    /* line 42, /Users/fbarrailla/Dev/projets/pokedex/app/components/screens/PokemonDetails.sass */
     .PokemonDetailsScreen .close-link:focus {
       outline: none; }
 
