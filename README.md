@@ -2,6 +2,12 @@
 
 Another simple Pokédex SPA
 
+[Online Demo](https://fbarrailla.github.io/Pokedex)
+
+<img src="https://github.com/fbarrailla/Pokedex/blob/master/capture.gif" width="500" />
+
+[:movie_camera:](https://github.com/vvo/gifify)
+
 __Made with love thanks to__
 - [React](https://facebook.github.io/react/)
 - [React Router](https://github.com/reactjs/react-router)
@@ -17,7 +23,7 @@ __Made with love thanks to__
 - [x] Filter list by caught monsters or favorites
 - [x] Local storage of filters
 - [x] Search monster(s) by name
-- [ ] Show monster details
+- [x] Show monster details
 
 ## Run project
 

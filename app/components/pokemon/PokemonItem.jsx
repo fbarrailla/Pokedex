@@ -1,7 +1,8 @@
 import React, { PropTypes } from 'react'
 import { Link } from 'react-router'
 import classNames from 'classnames'
-import { PICTURE_URL } from '../../constants'
+import PokemonName from './PokemonName'
+import PokemonImage from './PokemonImage'
 import PokemonItemToolbar from './PokemonItemToolbar'
 
 const propTypes = {
@@ -34,10 +35,8 @@ const PokemonItem = ({
       onClick={handleLinkClick}
     >
       <span className="pokemon-id">#{pad(+pokemon.id)}</span>
-      <div className="pokemon-picture" style={{
-        backgroundImage: `url(${PICTURE_URL}/${pokemon.id}.png)`
-      }} />
-      <h1 className="pokemon-name">{pokemon.name}</h1>
+      <PokemonImage pokemonId={pokemon.id} />
+      <PokemonName name={pokemon.name} />
       <PokemonItemToolbar
         pokemonId={pokemon.id}
         isFavorite={isFavorite}

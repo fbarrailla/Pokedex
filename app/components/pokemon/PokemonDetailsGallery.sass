@@ -1,0 +1,28 @@
+.PokemonDetailsGallery
+  flex: 0 0 auto
+  .item-label
+    margin-top: 0
+    font-size: 14px
+    text-align: center
+  .gallery
+    display: flex
+    button
+      background: none
+      border: none
+      font-size: 20px
+      &.disabled
+        opacity: .3
+      &:focus
+        outline: none
+      .arrow-left,
+      .arrow-right
+        display: block
+        width: 0
+        height: 0
+        border-style: solid
+      .arrow-right
+        border-width: 13px 0 13px 10px
+        border-color: transparent transparent transparent #333333
+      .arrow-left
+        border-width: 13px 10px 13px 0
+        border-color: transparent #333333 transparent transparent

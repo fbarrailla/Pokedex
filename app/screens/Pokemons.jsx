@@ -11,10 +11,6 @@ export default class PokemonScreen extends Component {
     }).isRequired
   }
 
-  componentWillMount() {
-    
-  }
-
   render() {
     const { pokemons } = this.props
     return (

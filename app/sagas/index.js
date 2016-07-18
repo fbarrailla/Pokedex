@@ -5,15 +5,18 @@ import {
   SELECT_POKEMON
 } from '../constants/actionTypes'
 
+import evolutionMap from '../constants/evolutionMap'
+
 // service methods
-import { getAll, getDetails } from '../services/pokemons'
+import { getAll, getDetails, getEvolutions } from '../services/pokemons'
 
 // actions
 import {
   requestPokemons,
   receivePokemons,
   requestPokemonDetails,
-  receivePokemonDetails
+  receivePokemonDetails,
+  receivePokemonEvolutions
 } from '../actions/pokemons'
 
 export function * fetchPokemons() {
@@ -29,9 +32,10 @@ export function * fetchDetails() {
   while (true) {
     const { pokemonId } = yield take(SELECT_POKEMON)
     yield put(requestPokemonDetails())
-    //const data = yield getDetails(pokemonId)
-    //console.log(data)
-    //yield put(receivePokemons(pokemons))
+    const data = yield getDetails(pokemonId)
+    yield put(receivePokemonDetails(data))
+    const evolutions = yield getEvolutions(evolutionMap[pokemonId])
+    yield put(receivePokemonEvolutions(evolutions.chain))
   }
 }
 

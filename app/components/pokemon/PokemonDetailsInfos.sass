@@ -1,0 +1,18 @@
+.PokemonDetailsInfos
+  flex: 1 2 auto
+  padding-left: 40px
+  .detail-row + .detail-row
+    margin-top: 10px
+    padding-top: 10px
+    border-top: 1px dashed rgba(0,0,0,.5)
+  .label
+    padding-right: 10px
+    display: inline-block
+    min-width: 80px
+  .item
+    &::after
+      content: ','
+    &:last-child::after
+      content: ''
+    & + .item
+      padding-left: 10px

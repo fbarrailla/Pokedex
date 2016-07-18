@@ -40,7 +40,7 @@ export default class ProgressiveRenderer extends Component {
     if (children.length <= BUFFER_SIZE) {
       items = children
     }
-    return <div>{items}</div>
+    return <div className="ProgressiveRenderer">{items}</div>
   }
 
 }

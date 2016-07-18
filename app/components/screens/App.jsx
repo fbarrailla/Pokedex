@@ -35,13 +35,16 @@ export default class LayoutScreen extends Component {
   }
 
   render() {
-    const { children, clearSearch, location } = this.props
+    const { children, clearSearch, location, params } = this.props
     const { searchStr } = this.state
+    const appClassName = classNames('AppScreen', {
+      'details-visible': params.id !== undefined
+    })
     const inputClassName = classNames('search-input', {
       filled: searchStr.length
     })
     return (
-      <div className="AppScreen">
+      <div className={appClassName}>
         <div className="header">
           <h1>Pokédex</h1>
           <input

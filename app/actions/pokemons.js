@@ -3,6 +3,7 @@ import {
   RECEIVE_POKEMONS,
   REQUEST_POKEMON_DETAILS,
   RECEIVE_POKEMON_DETAILS,
+  RECEIVE_POKEMON_EVOLUTIONS,
   FETCH_POKEMONS,
   SELECT_POKEMON,
   SET_SEARCH_FILTER,
@@ -31,6 +32,11 @@ export const requestPokemonDetails = () => ({
 export const receivePokemonDetails = data => ({
   type: RECEIVE_POKEMON_DETAILS,
   data
+})
+
+export const receivePokemonEvolutions = evolutions => ({
+  type: RECEIVE_POKEMON_EVOLUTIONS,
+  evolutions
 })
 
 export const selectPokemon = pokemonId => ({

@@ -1,12 +1,17 @@
-import { POKEAPI_URL, POKEAPI_DETAILS_URL } from '../constants'
+import { POKEAPI_URL } from '../constants'
 
 export const getAll = () => {
-  return fetch(POKEAPI_URL)
+  return fetch(`${POKEAPI_URL}/pokemons.json`)
     .then(resp => resp.json())
     .then(data => data.results)
 }
 
 export const getDetails = pokemonId => {
-  return fetch(`${POKEAPI_DETAILS_URL}/${pokemonId}`)
+  return fetch(`${POKEAPI_URL}/pokemon-${pokemonId}.json`)
+    .then(resp => resp.json())
+}
+
+export const getEvolutions = id => {
+  return fetch(`${POKEAPI_URL}/evolution-${id}.json`)
     .then(resp => resp.json())
 }
