@@ -27,8 +27,8 @@ export default class PokemonDetailsScreen extends Component {
     return (
       <div>
         <Link className="close-link" to={basePath}>✕</Link>
-        <PokemonName name={details.name || 'lol'} />
-        {!loading && typeof details.id !== undefined ? (
+        <PokemonName name={details.name || ''} />
+        {typeof details.id !== 'undefined' ? (
           <div className="details-container">
             <PokemonDetailsGallery items={details.sprites} />
             <PokemonDetailsInfos
@@ -54,7 +54,6 @@ export default class PokemonDetailsScreen extends Component {
       visible,
       loading
     })
-    console.log(className)
     return (
       <div className={className}>
         {this.renderDetails()}
