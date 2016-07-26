@@ -22,8 +22,8 @@ export default class PokemonDetailsScreen extends Component {
   }
 
   renderDetails() {
-    const { details, location, loading } = this.props
-    const basePath = '/' + location.pathname.match(/\/([a-z]+)/)[1]
+    const { details, params, loading } = this.props
+    const basePath = '/' + params.filter
     return (
       <div>
         <Link className="close-link" to={basePath}>✕</Link>

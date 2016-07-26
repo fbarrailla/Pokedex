@@ -3,7 +3,7 @@ import { Link } from 'react-router'
 import classNames from 'classnames'
 
 const menuLinks = {
-  pokemons: 'All',
+  all: 'All',
   favorites: 'Favorites',
   caught: 'Caught'
 }
@@ -65,17 +65,20 @@ export default class LayoutScreen extends Component {
           <div className="menu-links">
             {Object.keys(menuLinks).map(link => (
               { key: link, label: menuLinks[link], path: `/${link}` }
-            )).map(link => (
-              <Link
-                key={link.path}
-                to={link.path}
-                className={classNames({
-                  active: location.pathname.indexOf(link.path) > -1
-                })}
-              >
-                {link.label} ({this.props[link.key].length})
-              </Link>
-            ))}
+            )).map(link => {
+              const list = this.props[link.key] || this.props.pokemons
+              return (
+                <Link
+                  key={link.path}
+                  to={link.path}
+                  className={classNames({
+                    active: location.pathname.indexOf(link.path) > -1
+                  })}
+                >
+                  {link.label} ({list.length})
+                </Link>
+              )
+            })}
           </div>
         </div>
         <div className="wrapper">

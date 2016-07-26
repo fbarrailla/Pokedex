@@ -31,14 +31,8 @@ ReactDOM.render((
   <Provider store={store}>
     <Router history={hashHistory}>
       <Route path="/" component={AppContainer}>
-        <IndexRedirect to="pokemons" />
-        <Route path="pokemons" component={PokemonsContainer}>
-          <Route path=":id" component={PokemonDetailsContainer} />
-        </Route>
-        <Route path="favorites" component={PokemonsContainer}>
-          <Route path=":id" component={PokemonDetailsContainer} />
-        </Route>
-        <Route path="caught" component={PokemonsContainer}>
+        <IndexRedirect to="all" />
+        <Route path=":filter" component={PokemonsContainer}>
           <Route path=":id" component={PokemonDetailsContainer} />
         </Route>
       </Route>

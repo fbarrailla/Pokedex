@@ -36,7 +36,7 @@ export default connect(
 )(PokemonScreen)
 
 const filterPokemons = (ownProps, pokemons, favorites, caught) => {
-  switch (ownProps.location.pathname.match(/\/([a-z]+)/)[1]) {
+  switch (ownProps.params.filter) {
     case 'favorites':
       return pokemons.items.filter(p => favorites.indexOf(p.id) > -1)
     case 'caught':

@@ -41,7 +41,6 @@ export default class PokemonScreen extends Component {
   render() {
     const {
       pokemons,
-      location,
       params,
       searchFilter,
       toggleFavorite,
@@ -50,18 +49,21 @@ export default class PokemonScreen extends Component {
       caught,
       children
     } = this.props
-    const basePath = location.pathname.match(/\/([a-z]+)/)[1]
     return (
       <div className="PokemonsScreen">
         <ProgressiveRenderer>
           {this.applySearchFilter(pokemons, searchFilter).map(pokemon => {
             const selected = params.id === pokemon.id
+            let link = `/${params.filter}`
+            if (!selected) {
+              link += `/${pokemon.id}`
+            }
             return (
               <PokemonItem
                 key={pokemon.id}
                 pokemon={pokemon}
                 isSelected={selected}
-                linkTo={'/' + (selected ? basePath : `${basePath}/${pokemon.id}`)}
+                linkTo={link}
                 isFavorite={favorites.indexOf(pokemon.id) > -1}
                 isCaught={caught.indexOf(pokemon.id) > -1}
                 toggleFavorite={toggleFavorite}
